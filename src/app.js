@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ZoomLayerComponent from './zoomlayer.component';
+import ZoomLayerComponent from './zoom-layer.component';
 
 const props = {
   images: [
@@ -22,9 +22,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Zoom Layer with Swiper</h1>
-        <ZoomLayerComponent {...props}>
-        </ZoomLayerComponent>
+        <ZoomLayerComponent {...props} />
       </div>
     );
   }
