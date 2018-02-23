@@ -6,12 +6,15 @@ const Wrapper = styled.div`
 `;
 
 const ZoomWrapper = styled.div`
-  width: 100%;
-  height: calc(100vh - 100px);
+  //width: 100%;
+  //height: calc(100vh - 100px);
 `;
 
 const ZoomImage = styled.img`
-  //width: 200px;
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
 `;
 
 const ThumbnailsWrapper = styled.div`
@@ -37,7 +40,9 @@ class ZoomLayerComponent extends React.Component {
         <ZoomWrapper>
           <Swiper {...swiperParams}>
             {images.map((image, index) => (
-              <ZoomImage src={image.src} key={image.alt} alt={image.alt} />
+              <div key={image.alt}>
+                <ZoomImage src={image.src} alt={image.alt} />
+              </div>
             ))}
           </Swiper>
         </ZoomWrapper>
